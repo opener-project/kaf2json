@@ -1,0 +1,268 @@
+{	
+	"text"      : "Free sauna , hamman and swimming pool . Hotel very well located in front of the station . A train to Ams is leanving every 10 minutes . ",
+	"language"  : "en",
+	"terms"     : {
+ 	"t1":
+	{
+		"type"       :"open",
+		"lemma"      :"free",
+		"text"       :"Free",
+		"pos"        :"G",
+		"morphofeat" :"JJ",
+		"polarity"   :"positive"
+	},
+ 	"t2":
+	{
+		"type"       :"open",
+		"lemma"      :"sauna",
+		"text"       :"sauna",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t3":
+	{
+		"type"       :"close",
+		"lemma"      :",",
+		"text"       :",",
+		"pos"        :"O",
+		"morphofeat" :","
+	},
+ 	"t4":
+	{
+		"type"       :"open",
+		"lemma"      :"hamman",
+		"text"       :"hamman",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t5":
+	{
+		"type"       :"close",
+		"lemma"      :"and",
+		"text"       :"and",
+		"pos"        :"C",
+		"morphofeat" :"CC"
+	},
+ 	"t6":
+	{
+		"type"       :"open",
+		"lemma"      :"swim",
+		"text"       :"swimming",
+		"pos"        :"V",
+		"morphofeat" :"VBG"
+	},
+ 	"t7":
+	{
+		"type"       :"open",
+		"lemma"      :"pool",
+		"text"       :"pool",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t8":
+	{
+		"type"       :"close",
+		"lemma"      :".",
+		"text"       :".",
+		"pos"        :"O",
+		"morphofeat" :"."
+	},
+ 	"t9":
+	{
+		"type"       :"open",
+		"lemma"      :"hotel",
+		"text"       :"Hotel",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t10":
+	{
+		"type"       :"open",
+		"lemma"      :"very",
+		"text"       :"very",
+		"pos"        :"A",
+		"morphofeat" :"RB",
+		"polarity"   :""
+	},
+ 	"t11":
+	{
+		"type"       :"open",
+		"lemma"      :"well",
+		"text"       :"well",
+		"pos"        :"A",
+		"morphofeat" :"RB",
+		"polarity"   :"positive"
+	},
+ 	"t12":
+	{
+		"type"       :"open",
+		"lemma"      :"locate",
+		"text"       :"located",
+		"pos"        :"V",
+		"morphofeat" :"VBN"
+	},
+ 	"t13":
+	{
+		"type"       :"close",
+		"lemma"      :"in",
+		"text"       :"in",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t14":
+	{
+		"type"       :"open",
+		"lemma"      :"front",
+		"text"       :"front",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t15":
+	{
+		"type"       :"close",
+		"lemma"      :"of",
+		"text"       :"of",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t16":
+	{
+		"type"       :"close",
+		"lemma"      :"the",
+		"text"       :"the",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t17":
+	{
+		"type"       :"open",
+		"lemma"      :"station",
+		"text"       :"station",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t18":
+	{
+		"type"       :"close",
+		"lemma"      :".",
+		"text"       :".",
+		"pos"        :"O",
+		"morphofeat" :"."
+	},
+ 	"t19":
+	{
+		"type"       :"close",
+		"lemma"      :"a",
+		"text"       :"A",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t20":
+	{
+		"type"       :"open",
+		"lemma"      :"train",
+		"text"       :"train",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t21":
+	{
+		"type"       :"close",
+		"lemma"      :"to",
+		"text"       :"to",
+		"pos"        :"P",
+		"morphofeat" :"TO"
+	},
+ 	"t22":
+	{
+		"type"       :"close",
+		"lemma"      :"ams",
+		"text"       :"Ams",
+		"pos"        :"R",
+		"morphofeat" :"NNPS",
+		"entity"     :"e1"
+	},
+ 	"t23":
+	{
+		"type"       :"open",
+		"lemma"      :"be",
+		"text"       :"is",
+		"pos"        :"V",
+		"morphofeat" :"VBZ"
+	},
+ 	"t24":
+	{
+		"type"       :"open",
+		"lemma"      :"leanving",
+		"text"       :"leanving",
+		"pos"        :"V",
+		"morphofeat" :"VBG"
+	},
+ 	"t25":
+	{
+		"type"       :"close",
+		"lemma"      :"every",
+		"text"       :"every",
+		"pos"        :"D",
+		"morphofeat" :"DT",
+		"polarity"   :""
+	},
+ 	"t26":
+	{
+		"type"       :"close",
+		"lemma"      :"10",
+		"text"       :"10",
+		"pos"        :"O",
+		"morphofeat" :"CD"
+	},
+ 	"t27":
+	{
+		"type"       :"open",
+		"lemma"      :"minute",
+		"text"       :"minutes",
+		"pos"        :"N",
+		"morphofeat" :"NNS"
+	},
+ 	"t28":
+	{
+		"type"       :"close",
+		"lemma"      :".",
+		"text"       :".",
+		"pos"        :"O",
+		"morphofeat" :"."
+	}},
+	"sentiments": [
+{
+	"lexicon" :"VUA_olery_lexicon_en_lmf",
+	"polarity":"positive",
+	"termId"  :"t1",
+	"text"    :"Free"
+},
+{
+	"lexicon" :"VUA_olery_lexicon_en_lmf",
+	"polarity":"",
+	"termId"  :"t10",
+	"text"    :"very"
+},
+{
+	"lexicon" :"VUA_olery_lexicon_en_lmf",
+	"polarity":"positive",
+	"termId"  :"t11",
+	"text"    :"well"
+},
+{
+	"lexicon" :"VUA_olery_lexicon_en_lmf",
+	"polarity":"",
+	"termId"  :"t25",
+	"text"    :"every"
+}],
+	"entities"  : {
+ 	"e1":
+	{
+		"type"     :"location",
+		"text"     :"Ams",
+		"reference":"http://dbpedia.org/resource/Amsterdam_(Amtrak_station)",
+		"terms"    :["t22"]
+	}},
+	"opinions"  : {}
+}

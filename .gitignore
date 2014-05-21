@@ -1,0 +1,14 @@
+pkg
+
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+Gemfile.lock
+
+!.gitkeep
+
+*.log
+tmp/*

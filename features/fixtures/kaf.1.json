@@ -1,0 +1,1321 @@
+{	
+	"text"      : "Stayed one night at the Albus , picked it because of the location which was very close to everything . The room was lovely , however it was a bit noisy because it was in the basement close to the kitchen . The major problem we had with the hotel was on check out when we inquired about how long it takes to get the train from Amsterdam to the airport , and the lady working on the desk told us that the trains were not running that day . She told us that they had a special deal with a taxi company and that she could book us a taxi to the airport for €40 . She also told us that we should book the taxi straight away as it , as it had to be booked a minimum of 2 hrs before we needed it . ",
+	"language"  : "en",
+	"terms"     : {
+ 	"t1":
+	{
+		"type"       :"open",
+		"lemma"      :"stay",
+		"text"       :"Stayed",
+		"pos"        :"V",
+		"morphofeat" :"VBN"
+	},
+ 	"t2":
+	{
+		"type"       :"close",
+		"lemma"      :"one",
+		"text"       :"one",
+		"pos"        :"O",
+		"morphofeat" :"CD"
+	},
+ 	"t3":
+	{
+		"type"       :"open",
+		"lemma"      :"night",
+		"text"       :"night",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t4":
+	{
+		"type"       :"close",
+		"lemma"      :"at",
+		"text"       :"at",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t5":
+	{
+		"type"       :"close",
+		"lemma"      :"the",
+		"text"       :"the",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t6":
+	{
+		"type"       :"close",
+		"lemma"      :"Albus",
+		"text"       :"Albus",
+		"pos"        :"R",
+		"morphofeat" :"NNP",
+		"entity"     :"e1"
+	},
+ 	"t7":
+	{
+		"type"       :"close",
+		"lemma"      :",",
+		"text"       :",",
+		"pos"        :"O",
+		"morphofeat" :","
+	},
+ 	"t8":
+	{
+		"type"       :"open",
+		"lemma"      :"pick",
+		"text"       :"picked",
+		"pos"        :"V",
+		"morphofeat" :"VBD"
+	},
+ 	"t9":
+	{
+		"type"       :"close",
+		"lemma"      :"it",
+		"text"       :"it",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t10":
+	{
+		"type"       :"open",
+		"lemma"      :"because",
+		"text"       :"because",
+		"pos"        :"A",
+		"morphofeat" :"RB"
+	},
+ 	"t11":
+	{
+		"type"       :"close",
+		"lemma"      :"of",
+		"text"       :"of",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t12":
+	{
+		"type"       :"close",
+		"lemma"      :"the",
+		"text"       :"the",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t13":
+	{
+		"type"       :"open",
+		"lemma"      :"location",
+		"text"       :"location",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t14":
+	{
+		"type"       :"close",
+		"lemma"      :"which",
+		"text"       :"which",
+		"pos"        :"O",
+		"morphofeat" :"WDT"
+	},
+ 	"t15":
+	{
+		"type"       :"open",
+		"lemma"      :"be",
+		"text"       :"was",
+		"pos"        :"V",
+		"morphofeat" :"VBD"
+	},
+ 	"t16":
+	{
+		"type"       :"open",
+		"lemma"      :"very",
+		"text"       :"very",
+		"pos"        :"A",
+		"morphofeat" :"RB",
+		"polarity"   :""
+	},
+ 	"t17":
+	{
+		"type"       :"open",
+		"lemma"      :"close",
+		"text"       :"close",
+		"pos"        :"G",
+		"morphofeat" :"JJ",
+		"polarity"   :"positive"
+	},
+ 	"t18":
+	{
+		"type"       :"close",
+		"lemma"      :"to",
+		"text"       :"to",
+		"pos"        :"P",
+		"morphofeat" :"TO"
+	},
+ 	"t19":
+	{
+		"type"       :"open",
+		"lemma"      :"everything",
+		"text"       :"everything",
+		"pos"        :"N",
+		"morphofeat" :"NN",
+		"polarity"   :""
+	},
+ 	"t20":
+	{
+		"type"       :"close",
+		"lemma"      :".",
+		"text"       :".",
+		"pos"        :"O",
+		"morphofeat" :"."
+	},
+ 	"t21":
+	{
+		"type"       :"close",
+		"lemma"      :"the",
+		"text"       :"The",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t22":
+	{
+		"type"       :"open",
+		"lemma"      :"room",
+		"text"       :"room",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t23":
+	{
+		"type"       :"open",
+		"lemma"      :"be",
+		"text"       :"was",
+		"pos"        :"V",
+		"morphofeat" :"VBD"
+	},
+ 	"t24":
+	{
+		"type"       :"open",
+		"lemma"      :"lovely",
+		"text"       :"lovely",
+		"pos"        :"A",
+		"morphofeat" :"RB",
+		"polarity"   :"positive"
+	},
+ 	"t25":
+	{
+		"type"       :"close",
+		"lemma"      :",",
+		"text"       :",",
+		"pos"        :"O",
+		"morphofeat" :","
+	},
+ 	"t26":
+	{
+		"type"       :"open",
+		"lemma"      :"however",
+		"text"       :"however",
+		"pos"        :"A",
+		"morphofeat" :"RB"
+	},
+ 	"t27":
+	{
+		"type"       :"close",
+		"lemma"      :"it",
+		"text"       :"it",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t28":
+	{
+		"type"       :"open",
+		"lemma"      :"be",
+		"text"       :"was",
+		"pos"        :"V",
+		"morphofeat" :"VBD"
+	},
+ 	"t29":
+	{
+		"type"       :"close",
+		"lemma"      :"a",
+		"text"       :"a",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t30":
+	{
+		"type"       :"open",
+		"lemma"      :"bit",
+		"text"       :"bit",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t31":
+	{
+		"type"       :"open",
+		"lemma"      :"noisy",
+		"text"       :"noisy",
+		"pos"        :"A",
+		"morphofeat" :"RB",
+		"polarity"   :"negative"
+	},
+ 	"t32":
+	{
+		"type"       :"close",
+		"lemma"      :"because",
+		"text"       :"because",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t33":
+	{
+		"type"       :"close",
+		"lemma"      :"it",
+		"text"       :"it",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t34":
+	{
+		"type"       :"open",
+		"lemma"      :"be",
+		"text"       :"was",
+		"pos"        :"V",
+		"morphofeat" :"VBD"
+	},
+ 	"t35":
+	{
+		"type"       :"close",
+		"lemma"      :"in",
+		"text"       :"in",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t36":
+	{
+		"type"       :"close",
+		"lemma"      :"the",
+		"text"       :"the",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t37":
+	{
+		"type"       :"open",
+		"lemma"      :"basement",
+		"text"       :"basement",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t38":
+	{
+		"type"       :"open",
+		"lemma"      :"close",
+		"text"       :"close",
+		"pos"        :"N",
+		"morphofeat" :"NN",
+		"polarity"   :"negative"
+	},
+ 	"t39":
+	{
+		"type"       :"close",
+		"lemma"      :"to",
+		"text"       :"to",
+		"pos"        :"P",
+		"morphofeat" :"TO"
+	},
+ 	"t40":
+	{
+		"type"       :"close",
+		"lemma"      :"the",
+		"text"       :"the",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t41":
+	{
+		"type"       :"open",
+		"lemma"      :"kitchen",
+		"text"       :"kitchen",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t42":
+	{
+		"type"       :"close",
+		"lemma"      :".",
+		"text"       :".",
+		"pos"        :"O",
+		"morphofeat" :"."
+	},
+ 	"t43":
+	{
+		"type"       :"close",
+		"lemma"      :"the",
+		"text"       :"The",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t44":
+	{
+		"type"       :"open",
+		"lemma"      :"major",
+		"text"       :"major",
+		"pos"        :"G",
+		"morphofeat" :"JJ",
+		"polarity"   :""
+	},
+ 	"t45":
+	{
+		"type"       :"open",
+		"lemma"      :"problem",
+		"text"       :"problem",
+		"pos"        :"N",
+		"morphofeat" :"NN",
+		"polarity"   :"negative"
+	},
+ 	"t46":
+	{
+		"type"       :"close",
+		"lemma"      :"we",
+		"text"       :"we",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t47":
+	{
+		"type"       :"open",
+		"lemma"      :"have",
+		"text"       :"had",
+		"pos"        :"V",
+		"morphofeat" :"VBD"
+	},
+ 	"t48":
+	{
+		"type"       :"close",
+		"lemma"      :"with",
+		"text"       :"with",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t49":
+	{
+		"type"       :"close",
+		"lemma"      :"the",
+		"text"       :"the",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t50":
+	{
+		"type"       :"open",
+		"lemma"      :"hotel",
+		"text"       :"hotel",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t51":
+	{
+		"type"       :"open",
+		"lemma"      :"be",
+		"text"       :"was",
+		"pos"        :"V",
+		"morphofeat" :"VBD"
+	},
+ 	"t52":
+	{
+		"type"       :"close",
+		"lemma"      :"on",
+		"text"       :"on",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t53":
+	{
+		"type"       :"open",
+		"lemma"      :"check",
+		"text"       :"check",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t54":
+	{
+		"type"       :"close",
+		"lemma"      :"out",
+		"text"       :"out",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t55":
+	{
+		"type"       :"close",
+		"lemma"      :"when",
+		"text"       :"when",
+		"pos"        :"O",
+		"morphofeat" :"WRB"
+	},
+ 	"t56":
+	{
+		"type"       :"close",
+		"lemma"      :"we",
+		"text"       :"we",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t57":
+	{
+		"type"       :"open",
+		"lemma"      :"inquire",
+		"text"       :"inquired",
+		"pos"        :"V",
+		"morphofeat" :"VBD"
+	},
+ 	"t58":
+	{
+		"type"       :"close",
+		"lemma"      :"about",
+		"text"       :"about",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t59":
+	{
+		"type"       :"close",
+		"lemma"      :"how",
+		"text"       :"how",
+		"pos"        :"O",
+		"morphofeat" :"WRB"
+	},
+ 	"t60":
+	{
+		"type"       :"open",
+		"lemma"      :"long",
+		"text"       :"long",
+		"pos"        :"G",
+		"morphofeat" :"JJ"
+	},
+ 	"t61":
+	{
+		"type"       :"close",
+		"lemma"      :"it",
+		"text"       :"it",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t62":
+	{
+		"type"       :"open",
+		"lemma"      :"take",
+		"text"       :"takes",
+		"pos"        :"V",
+		"morphofeat" :"VBZ"
+	},
+ 	"t63":
+	{
+		"type"       :"close",
+		"lemma"      :"to",
+		"text"       :"to",
+		"pos"        :"P",
+		"morphofeat" :"TO"
+	},
+ 	"t64":
+	{
+		"type"       :"open",
+		"lemma"      :"get",
+		"text"       :"get",
+		"pos"        :"V",
+		"morphofeat" :"VB"
+	},
+ 	"t65":
+	{
+		"type"       :"close",
+		"lemma"      :"the",
+		"text"       :"the",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t66":
+	{
+		"type"       :"open",
+		"lemma"      :"train",
+		"text"       :"train",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t67":
+	{
+		"type"       :"close",
+		"lemma"      :"from",
+		"text"       :"from",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t68":
+	{
+		"type"       :"open",
+		"lemma"      :"amsterdam",
+		"text"       :"Amsterdam",
+		"pos"        :"N",
+		"morphofeat" :"NN",
+		"entity"     :"e2"
+	},
+ 	"t69":
+	{
+		"type"       :"close",
+		"lemma"      :"to",
+		"text"       :"to",
+		"pos"        :"P",
+		"morphofeat" :"TO"
+	},
+ 	"t70":
+	{
+		"type"       :"close",
+		"lemma"      :"the",
+		"text"       :"the",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t71":
+	{
+		"type"       :"open",
+		"lemma"      :"airport",
+		"text"       :"airport",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t72":
+	{
+		"type"       :"close",
+		"lemma"      :",",
+		"text"       :",",
+		"pos"        :"O",
+		"morphofeat" :","
+	},
+ 	"t73":
+	{
+		"type"       :"close",
+		"lemma"      :"and",
+		"text"       :"and",
+		"pos"        :"C",
+		"morphofeat" :"CC"
+	},
+ 	"t74":
+	{
+		"type"       :"close",
+		"lemma"      :"the",
+		"text"       :"the",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t75":
+	{
+		"type"       :"open",
+		"lemma"      :"lady",
+		"text"       :"lady",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t76":
+	{
+		"type"       :"open",
+		"lemma"      :"work",
+		"text"       :"working",
+		"pos"        :"V",
+		"morphofeat" :"VBG"
+	},
+ 	"t77":
+	{
+		"type"       :"close",
+		"lemma"      :"on",
+		"text"       :"on",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t78":
+	{
+		"type"       :"close",
+		"lemma"      :"the",
+		"text"       :"the",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t79":
+	{
+		"type"       :"open",
+		"lemma"      :"desk",
+		"text"       :"desk",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t80":
+	{
+		"type"       :"open",
+		"lemma"      :"tell",
+		"text"       :"told",
+		"pos"        :"V",
+		"morphofeat" :"VBD"
+	},
+ 	"t81":
+	{
+		"type"       :"close",
+		"lemma"      :"us",
+		"text"       :"us",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t82":
+	{
+		"type"       :"close",
+		"lemma"      :"that",
+		"text"       :"that",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t83":
+	{
+		"type"       :"close",
+		"lemma"      :"the",
+		"text"       :"the",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t84":
+	{
+		"type"       :"open",
+		"lemma"      :"train",
+		"text"       :"trains",
+		"pos"        :"N",
+		"morphofeat" :"NNS"
+	},
+ 	"t85":
+	{
+		"type"       :"open",
+		"lemma"      :"be",
+		"text"       :"were",
+		"pos"        :"V",
+		"morphofeat" :"VBD"
+	},
+ 	"t86":
+	{
+		"type"       :"open",
+		"lemma"      :"not",
+		"text"       :"not",
+		"pos"        :"A",
+		"morphofeat" :"RB",
+		"polarity"   :""
+	},
+ 	"t87":
+	{
+		"type"       :"open",
+		"lemma"      :"run",
+		"text"       :"running",
+		"pos"        :"V",
+		"morphofeat" :"VBG"
+	},
+ 	"t88":
+	{
+		"type"       :"close",
+		"lemma"      :"that",
+		"text"       :"that",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t89":
+	{
+		"type"       :"open",
+		"lemma"      :"day",
+		"text"       :"day",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t90":
+	{
+		"type"       :"close",
+		"lemma"      :".",
+		"text"       :".",
+		"pos"        :"O",
+		"morphofeat" :"."
+	},
+ 	"t91":
+	{
+		"type"       :"close",
+		"lemma"      :"she",
+		"text"       :"She",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t92":
+	{
+		"type"       :"open",
+		"lemma"      :"tell",
+		"text"       :"told",
+		"pos"        :"V",
+		"morphofeat" :"VBD"
+	},
+ 	"t93":
+	{
+		"type"       :"close",
+		"lemma"      :"us",
+		"text"       :"us",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t94":
+	{
+		"type"       :"close",
+		"lemma"      :"that",
+		"text"       :"that",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t95":
+	{
+		"type"       :"close",
+		"lemma"      :"they",
+		"text"       :"they",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t96":
+	{
+		"type"       :"open",
+		"lemma"      :"have",
+		"text"       :"had",
+		"pos"        :"V",
+		"morphofeat" :"VBD"
+	},
+ 	"t97":
+	{
+		"type"       :"close",
+		"lemma"      :"a",
+		"text"       :"a",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t98":
+	{
+		"type"       :"open",
+		"lemma"      :"special",
+		"text"       :"special",
+		"pos"        :"G",
+		"morphofeat" :"JJ",
+		"polarity"   :"positive"
+	},
+ 	"t99":
+	{
+		"type"       :"open",
+		"lemma"      :"deal",
+		"text"       :"deal",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t100":
+	{
+		"type"       :"close",
+		"lemma"      :"with",
+		"text"       :"with",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t101":
+	{
+		"type"       :"close",
+		"lemma"      :"a",
+		"text"       :"a",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t102":
+	{
+		"type"       :"open",
+		"lemma"      :"taxi",
+		"text"       :"taxi",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t103":
+	{
+		"type"       :"open",
+		"lemma"      :"company",
+		"text"       :"company",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t104":
+	{
+		"type"       :"close",
+		"lemma"      :"and",
+		"text"       :"and",
+		"pos"        :"C",
+		"morphofeat" :"CC"
+	},
+ 	"t105":
+	{
+		"type"       :"close",
+		"lemma"      :"that",
+		"text"       :"that",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t106":
+	{
+		"type"       :"close",
+		"lemma"      :"she",
+		"text"       :"she",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t107":
+	{
+		"type"       :"close",
+		"lemma"      :"can",
+		"text"       :"could",
+		"pos"        :"O",
+		"morphofeat" :"MD"
+	},
+ 	"t108":
+	{
+		"type"       :"open",
+		"lemma"      :"book",
+		"text"       :"book",
+		"pos"        :"V",
+		"morphofeat" :"VB"
+	},
+ 	"t109":
+	{
+		"type"       :"close",
+		"lemma"      :"us",
+		"text"       :"us",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t110":
+	{
+		"type"       :"close",
+		"lemma"      :"a",
+		"text"       :"a",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t111":
+	{
+		"type"       :"open",
+		"lemma"      :"taxi",
+		"text"       :"taxi",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t112":
+	{
+		"type"       :"close",
+		"lemma"      :"to",
+		"text"       :"to",
+		"pos"        :"P",
+		"morphofeat" :"TO"
+	},
+ 	"t113":
+	{
+		"type"       :"close",
+		"lemma"      :"the",
+		"text"       :"the",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t114":
+	{
+		"type"       :"open",
+		"lemma"      :"airport",
+		"text"       :"airport",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t115":
+	{
+		"type"       :"close",
+		"lemma"      :"for",
+		"text"       :"for",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t116":
+	{
+		"type"       :"close",
+		"lemma"      :"€40",
+		"text"       :"€40",
+		"pos"        :"O",
+		"morphofeat" :"CD"
+	},
+ 	"t117":
+	{
+		"type"       :"close",
+		"lemma"      :".",
+		"text"       :".",
+		"pos"        :"O",
+		"morphofeat" :"."
+	},
+ 	"t118":
+	{
+		"type"       :"close",
+		"lemma"      :"she",
+		"text"       :"She",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t119":
+	{
+		"type"       :"open",
+		"lemma"      :"also",
+		"text"       :"also",
+		"pos"        :"A",
+		"morphofeat" :"RB"
+	},
+ 	"t120":
+	{
+		"type"       :"open",
+		"lemma"      :"tell",
+		"text"       :"told",
+		"pos"        :"V",
+		"morphofeat" :"VBD"
+	},
+ 	"t121":
+	{
+		"type"       :"close",
+		"lemma"      :"us",
+		"text"       :"us",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t122":
+	{
+		"type"       :"close",
+		"lemma"      :"that",
+		"text"       :"that",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t123":
+	{
+		"type"       :"close",
+		"lemma"      :"we",
+		"text"       :"we",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t124":
+	{
+		"type"       :"close",
+		"lemma"      :"should",
+		"text"       :"should",
+		"pos"        :"O",
+		"morphofeat" :"MD"
+	},
+ 	"t125":
+	{
+		"type"       :"open",
+		"lemma"      :"book",
+		"text"       :"book",
+		"pos"        :"V",
+		"morphofeat" :"VB"
+	},
+ 	"t126":
+	{
+		"type"       :"close",
+		"lemma"      :"the",
+		"text"       :"the",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t127":
+	{
+		"type"       :"open",
+		"lemma"      :"taxi",
+		"text"       :"taxi",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t128":
+	{
+		"type"       :"open",
+		"lemma"      :"straight",
+		"text"       :"straight",
+		"pos"        :"A",
+		"morphofeat" :"RB"
+	},
+ 	"t129":
+	{
+		"type"       :"open",
+		"lemma"      :"away",
+		"text"       :"away",
+		"pos"        :"A",
+		"morphofeat" :"RB"
+	},
+ 	"t130":
+	{
+		"type"       :"close",
+		"lemma"      :"as",
+		"text"       :"as",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t131":
+	{
+		"type"       :"close",
+		"lemma"      :"it",
+		"text"       :"it",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t132":
+	{
+		"type"       :"close",
+		"lemma"      :",",
+		"text"       :",",
+		"pos"        :"O",
+		"morphofeat" :","
+	},
+ 	"t133":
+	{
+		"type"       :"close",
+		"lemma"      :"as",
+		"text"       :"as",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t134":
+	{
+		"type"       :"close",
+		"lemma"      :"it",
+		"text"       :"it",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t135":
+	{
+		"type"       :"open",
+		"lemma"      :"have",
+		"text"       :"had",
+		"pos"        :"V",
+		"morphofeat" :"VBD"
+	},
+ 	"t136":
+	{
+		"type"       :"close",
+		"lemma"      :"to",
+		"text"       :"to",
+		"pos"        :"P",
+		"morphofeat" :"TO"
+	},
+ 	"t137":
+	{
+		"type"       :"open",
+		"lemma"      :"be",
+		"text"       :"be",
+		"pos"        :"V",
+		"morphofeat" :"VB"
+	},
+ 	"t138":
+	{
+		"type"       :"open",
+		"lemma"      :"book",
+		"text"       :"booked",
+		"pos"        :"V",
+		"morphofeat" :"VBN"
+	},
+ 	"t139":
+	{
+		"type"       :"close",
+		"lemma"      :"a",
+		"text"       :"a",
+		"pos"        :"D",
+		"morphofeat" :"DT"
+	},
+ 	"t140":
+	{
+		"type"       :"open",
+		"lemma"      :"minimum",
+		"text"       :"minimum",
+		"pos"        :"N",
+		"morphofeat" :"NN"
+	},
+ 	"t141":
+	{
+		"type"       :"close",
+		"lemma"      :"of",
+		"text"       :"of",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t142":
+	{
+		"type"       :"close",
+		"lemma"      :"2",
+		"text"       :"2",
+		"pos"        :"O",
+		"morphofeat" :"CD"
+	},
+ 	"t143":
+	{
+		"type"       :"open",
+		"lemma"      :"hrs",
+		"text"       :"hrs",
+		"pos"        :"N",
+		"morphofeat" :"NNS"
+	},
+ 	"t144":
+	{
+		"type"       :"close",
+		"lemma"      :"before",
+		"text"       :"before",
+		"pos"        :"P",
+		"morphofeat" :"IN"
+	},
+ 	"t145":
+	{
+		"type"       :"close",
+		"lemma"      :"we",
+		"text"       :"we",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t146":
+	{
+		"type"       :"open",
+		"lemma"      :"need",
+		"text"       :"needed",
+		"pos"        :"V",
+		"morphofeat" :"VBD",
+		"polarity"   :"negative"
+	},
+ 	"t147":
+	{
+		"type"       :"close",
+		"lemma"      :"it",
+		"text"       :"it",
+		"pos"        :"Q",
+		"morphofeat" :"PRP"
+	},
+ 	"t148":
+	{
+		"type"       :"close",
+		"lemma"      :".",
+		"text"       :".",
+		"pos"        :"O",
+		"morphofeat" :"."
+	}},
+	"sentiments": [
+{
+	"lexicon" :"VUA_olery_lexicon_en_lmf",
+	"polarity":"",
+	"termId"  :"t16",
+	"text"    :"very"
+},
+{
+	"lexicon" :"VUA_olery_lexicon_en_lmf",
+	"polarity":"positive",
+	"termId"  :"t17",
+	"text"    :"close"
+},
+{
+	"lexicon" :"VUA_olery_lexicon_en_lmf",
+	"polarity":"",
+	"termId"  :"t19",
+	"text"    :"everything"
+},
+{
+	"lexicon" :"VUA_olery_lexicon_en_lmf",
+	"polarity":"positive",
+	"termId"  :"t24",
+	"text"    :"lovely"
+},
+{
+	"lexicon" :"VUA_olery_lexicon_en_lmf",
+	"polarity":"negative",
+	"termId"  :"t31",
+	"text"    :"noisy"
+},
+{
+	"lexicon" :"VUA_olery_lexicon_en_lmf",
+	"polarity":"negative",
+	"termId"  :"t38",
+	"text"    :"close"
+},
+{
+	"lexicon" :"VUA_olery_lexicon_en_lmf",
+	"polarity":"",
+	"termId"  :"t44",
+	"text"    :"major"
+},
+{
+	"lexicon" :"VUA_olery_lexicon_en_lmf",
+	"polarity":"negative",
+	"termId"  :"t45",
+	"text"    :"problem"
+},
+{
+	"lexicon" :"VUA_olery_lexicon_en_lmf",
+	"polarity":"",
+	"termId"  :"t86",
+	"text"    :"not"
+},
+{
+	"lexicon" :"VUA_olery_lexicon_en_lmf",
+	"polarity":"positive",
+	"termId"  :"t98",
+	"text"    :"special"
+},
+{
+	"lexicon" :"VUA_olery_lexicon_en_lmf",
+	"polarity":"negative",
+	"termId"  :"t146",
+	"text"    :"needed"
+}],
+	"entities"  : {
+ 	"e1":
+	{
+		"type"     :"location",
+		"text"     :"Albus",
+		"reference":"",
+		"terms"    :["t6"]
+	},
+ 	"e2":
+	{
+		"type"     :"location",
+		"text"     :"Amsterdam",
+		"reference":"",
+		"terms"    :["t68"]
+	}},
+	"opinions"  : {
+ 	"o1":
+	{
+		"holder"    :"",
+		"target"    :"",
+		"polarity"  :"positive",
+		"strength"  :"1",
+		"text"      :"very close to everything",
+		"terms"     :["t16","t17","t18","t19"]
+	},
+ 	"o2":
+	{
+		"holder"    :"",
+		"target"    :"",
+		"polarity"  :"positive",
+		"strength"  :"1",
+		"text"      :"lovely",
+		"terms"     :["t24"]
+	},
+ 	"o3":
+	{
+		"holder"    :"",
+		"target"    :"",
+		"polarity"  :"negative",
+		"strength"  :"1",
+		"text"      :"The major problem",
+		"terms"     :["t43","t44","t45"]
+	},
+ 	"o4":
+	{
+		"holder"    :"",
+		"target"    :"",
+		"polarity"  :"positive",
+		"strength"  :"1",
+		"text"      :"special deal with a taxi company",
+		"terms"     :["t98","t99","t100","t101","t102","t103"]
+	}}
+}
