@@ -4,7 +4,7 @@ Gem::Specification.new do |gem|
   gem.name                  = 'opener-kaf2json'
   gem.version               = Opener::KafToJson::VERSION
   gem.authors               = ['development@olery.com']
-  gem.summary               = 'MySQL data storing for the web services output when using callbacks.'
+  gem.summary               = 'Converts KAF input into JSON'
   gem.description           = gem.summary
   gem.homepage              = "http://opener-project.github.com/"
   gem.has_rdoc              = 'yard'
