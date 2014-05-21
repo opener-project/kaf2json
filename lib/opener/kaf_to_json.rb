@@ -3,8 +3,6 @@ require_relative 'kaf_to_json/server'
 
 require 'json'
 require 'nokogiri'
-require 'open3'
-require 'optparse'
 
 
 
