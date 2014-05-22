@@ -1,8 +1,7 @@
 require_relative 'kaf_to_json/version'
 require_relative 'kaf_to_json/server'
 
-require 'json'
-require 'nokogiri'
+require 'saxon-xslt'
 
 
 
@@ -44,9 +43,9 @@ module Opener
     # @return [Array]
     #
     def run(input)
-      doc = Nokogiri::XML(input)
-      xslt = Nokogiri::XSLT(File.read(xsl))
-      xslt.apply_to(doc)
+      doc = Saxon::XML(input)
+      xslt = Saxon::XSLT(File.read(xsl))
+      xslt.transform(doc).to_string
     end
     
     alias tag run
