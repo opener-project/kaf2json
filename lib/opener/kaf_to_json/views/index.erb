@@ -1,163 +1,303 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link type="text/css" rel="stylesheet" charset="UTF-8" href="markdown.css"/>
-    <title>KAF to JSON Webservice</title>
-  </head>
-  <body>
-    <h1>KAF to JSON Web Service</h1>
+<head>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="markdown.css"/>
+<title>KAF to JSON Webservice</title>
+</head>
+<body>
+<h1>KAF to JSON Web Service</h1>
 
-    <h2>Example Usage</h2>
+<h2>Example Usage</h2>
 
-    <p>
-      <pre>kaf2json-server start</pre>
-      <pre>curl -d &#39;input=&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&lt;KAF version=&quot;v1.opener&quot; xml:lang=&quot;en&quot;&gt;&lt;kafHeader&gt;&lt;linguisticProcessors layer=&quot;text&quot;&gt;&lt;lp name=&quot;opennlp-en-tok&quot; timestamp=&quot;2013-06-11T13:41:37Z&quot; version=&quot;1.0&quot;/&gt;&lt;lp name=&quot;opennlp-en-sent&quot; timestamp=&quot;2013-06-11T13:41:37Z&quot; version=&quot;1.0&quot;/&gt;&lt;/linguisticProcessors&gt;&lt;/kafHeader&gt;&lt;text&gt;&lt;wf length=&quot;4&quot; offset=&quot;0&quot; para=&quot;1&quot; sent=&quot;1&quot; wid=&quot;w1&quot;&gt;this&lt;/wf&gt;&lt;wf length=&quot;2&quot; offset=&quot;5&quot; para=&quot;1&quot; sent=&quot;1&quot; wid=&quot;w2&quot;&gt;is&lt;/wf&gt;&lt;wf length=&quot;2&quot; offset=&quot;8&quot; para=&quot;1&quot; sent=&quot;1&quot; wid=&quot;w3&quot;&gt;an&lt;/wf&gt;&lt;wf length=&quot;7&quot; offset=&quot;11&quot; para=&quot;1&quot; sent=&quot;1&quot; wid=&quot;w4&quot;&gt;english&lt;/wf&gt;&lt;wf length=&quot;4&quot; offset=&quot;19&quot; para=&quot;1&quot; sent=&quot;1&quot; wid=&quot;w5&quot;&gt;text&lt;/wf&gt;&lt;/text&gt;&lt;/KAF&gt;&#39; http://localhost:9292 -XPOST</pre>
+<p>
+<pre>kaf2json-server start</pre>
+<pre>curl -d &#39;input=&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;KAF xml:lang=&quot;en&quot;&gt;&lt;kafHeader&gt;&lt;linguisticProcessors layer=&quot;text&quot;&gt;&lt;lp timestamp=&quot;2013-04-11T09:21:29CEST&quot; version=&quot;1.0&quot; name=&quot;Open-nlp sentence splitter&quot;/&gt;&lt;lp timestamp=&quot;2013-04-11T09:21:29CEST&quot; version=&quot;1.0&quot; name=&quot;Open-nlp tokenizer&quot;/&gt;&lt;/linguisticProcessors&gt;&lt;linguisticProcessors layer=&quot;opinions&quot;&gt;&lt;lp timestamp=&quot;*&quot; version=&quot;1.0&quot; name=&quot;Basic opinion detector with Pos&quot;/&gt;&lt;/linguisticProcessors&gt;&lt;linguisticProcessor layer=&quot;terms&quot;&gt;&lt;lp timestamp=&quot;2013-04-11T09:23:08CEST&quot; version=&quot;1.0&quot; name=&quot;Basic_polarity_tagger_with_pos&quot;/&gt;&lt;/linguisticProcessor&gt;&lt;linguisticProcessor layer=&quot;term&quot;&gt;&lt;lp timestamp=&quot;2013-04-11T09:23:07CEST&quot; version=&quot;1.0&quot; name=&quot;TreeTagger_from_kaf&quot;/&gt;&lt;/linguisticProcessor&gt;&lt;/kafHeader&gt;&lt;text&gt;&lt;wf wid=&quot;w_1&quot; sent=&quot;s_1&quot;&gt;This&lt;/wf&gt;&lt;wf wid=&quot;w_2&quot; sent=&quot;s_1&quot;&gt;is&lt;/wf&gt;&lt;wf wid=&quot;w_3&quot; sent=&quot;s_1&quot;&gt;a&lt;/wf&gt;&lt;wf wid=&quot;w_4&quot; sent=&quot;s_1&quot;&gt;very&lt;/wf&gt;&lt;wf wid=&quot;w_5&quot; sent=&quot;s_1&quot;&gt;nice&lt;/wf&gt;&lt;wf wid=&quot;w_6&quot; sent=&quot;s_1&quot;&gt;hotel&lt;/wf&gt;&lt;wf wid=&quot;w_7&quot; sent=&quot;s_1&quot;&gt;in&lt;/wf&gt;&lt;wf wid=&quot;w_8&quot; sent=&quot;s_1&quot;&gt;Amsterdam&lt;/wf&gt;&lt;/text&gt;&lt;terms&gt;&lt;term tid=&quot;t_1&quot; lemma=&quot;this&quot; morphofeat=&quot;DT&quot; type=&quot;close&quot; pos=&quot;D&quot;&gt;&lt;span&gt;&lt;target id=&quot;w_1&quot;/&gt;&lt;/span&gt;&lt;/term&gt;&lt;term tid=&quot;t_2&quot; lemma=&quot;be&quot; morphofeat=&quot;VBZ&quot; type=&quot;open&quot; pos=&quot;V&quot;&gt;&lt;span&gt;&lt;target id=&quot;w_2&quot;/&gt;&lt;/span&gt;&lt;/term&gt;&lt;term tid=&quot;t_3&quot; lemma=&quot;a&quot; morphofeat=&quot;DT&quot; type=&quot;close&quot; pos=&quot;D&quot;&gt;&lt;span&gt;&lt;target id=&quot;w_3&quot;/&gt;&lt;/span&gt;&lt;/term&gt;&lt;term tid=&quot;t_4&quot; lemma=&quot;very&quot; morphofeat=&quot;RB&quot; type=&quot;open&quot; pos=&quot;A&quot;&gt;&lt;span&gt;&lt;target id=&quot;w_4&quot;/&gt;&lt;/span&gt;&lt;sentiment sentiment_modifier=&quot;intensifier&quot; resource=&quot;VUA_olery_lexicon_en_lmf&quot;/&gt;&lt;/term&gt;&lt;term tid=&quot;t_5&quot; lemma=&quot;nice&quot; morphofeat=&quot;JJ&quot; type=&quot;open&quot; pos=&quot;G&quot;&gt;&lt;span&gt;&lt;target id=&quot;w_5&quot;/&gt;&lt;/span&gt;&lt;sentiment polarity=&quot;positive&quot; resource=&quot;VUA_olery_lexicon_en_lmf&quot;/&gt;&lt;/term&gt;&lt;term tid=&quot;t_6&quot; lemma=&quot;hotel&quot; morphofeat=&quot;NN&quot; type=&quot;open&quot; pos=&quot;N&quot;&gt;&lt;span&gt;&lt;target id=&quot;w_6&quot;/&gt;&lt;/span&gt;&lt;/term&gt;&lt;term tid=&quot;t_7&quot; lemma=&quot;in&quot; morphofeat=&quot;IN&quot; type=&quot;close&quot; pos=&quot;P&quot;&gt;&lt;span&gt;&lt;target id=&quot;w_7&quot;/&gt;&lt;/span&gt;&lt;/term&gt;&lt;term tid=&quot;t_8&quot; lemma=&quot;Amsterdam&quot; morphofeat=&quot;NP&quot; type=&quot;open&quot; pos=&quot;R&quot;&gt;&lt;span&gt;&lt;target id=&quot;w_8&quot;/&gt;&lt;/span&gt;&lt;/term&gt;&lt;/terms&gt;&lt;entities&gt;&lt;entity eid=&quot;e15&quot; type=&quot;location&quot;&gt;&lt;references&gt;&lt;span&gt;&lt;!--Amsterdam --&gt;&lt;target id=&quot;t_8&quot;/&gt;&lt;/span&gt;&lt;/references&gt;&lt;/entity&gt;&lt;/entities&gt;&lt;opinions&gt;&lt;opinion oid=&quot;o1&quot;&gt;&lt;opinion_target&gt;&lt;!--hotel--&gt;&lt;span&gt;&lt;target id=&quot;t_6&quot;/&gt;&lt;/span&gt;&lt;/opinion_target&gt;&lt;opinion_expression polarity=&quot;positive&quot; strength=&quot;2&quot;&gt;&lt;!--very nice--&gt;&lt;span&gt;&lt;target id=&quot;t_4&quot;/&gt;&lt;target id=&quot;t_5&quot;/&gt;&lt;/span&gt;&lt;/opinion_expression&gt;&lt;/opinion&gt;&lt;/opinions&gt;&lt;/KAF&gt;&#39; http://localhost:9292 -XPOST</pre>
 
-      outputs:
+outputs:
 
-      <pre>
-&lt;?xml version=&#39;1.0&#39; encoding=&#39;UTF-8&#39;?&gt;
-&lt;KAF version=&quot;v1.opener&quot; xml:lang=&quot;en&quot;&gt;
-  &lt;kafHeader&gt;
-    &lt;linguisticProcessors layer=&quot;text&quot;&gt;
-      &lt;lp name=&quot;opennlp-en-tok&quot; timestamp=&quot;2013-06-11T13:41:37Z&quot; version=&quot;1.0&quot;/&gt;
-      &lt;lp name=&quot;opennlp-en-sent&quot; timestamp=&quot;2013-06-11T13:41:37Z&quot; version=&quot;1.0&quot;/&gt;
-    &lt;/linguisticProcessors&gt;
-    &lt;linguisticProcessor layer=&quot;term&quot;&gt;
-      &lt;lp timestamp=&quot;2013-06-12T15:18:03CEST&quot; version=&quot;1.0&quot; name=&quot;Open nlp pos tagger&quot;/&gt;
-    &lt;/linguisticProcessor&gt;
-  &lt;/kafHeader&gt;
-  &lt;text&gt;
-    &lt;wf length=&quot;4&quot; offset=&quot;0&quot; para=&quot;1&quot; sent=&quot;1&quot; wid=&quot;w1&quot;&gt;this&lt;/wf&gt;
-    &lt;wf length=&quot;2&quot; offset=&quot;5&quot; para=&quot;1&quot; sent=&quot;1&quot; wid=&quot;w2&quot;&gt;is&lt;/wf&gt;
-    &lt;wf length=&quot;2&quot; offset=&quot;8&quot; para=&quot;1&quot; sent=&quot;1&quot; wid=&quot;w3&quot;&gt;an&lt;/wf&gt;
-    &lt;wf length=&quot;7&quot; offset=&quot;11&quot; para=&quot;1&quot; sent=&quot;1&quot; wid=&quot;w4&quot;&gt;english&lt;/wf&gt;
-    &lt;wf length=&quot;4&quot; offset=&quot;19&quot; para=&quot;1&quot; sent=&quot;1&quot; wid=&quot;w5&quot;&gt;text&lt;/wf&gt;
-  &lt;/text&gt;
-  &lt;terms&gt;
-    &lt;term lemma=&quot;this&quot; morphofeat=&quot;FM&quot; pos=&quot;O&quot; tid=&quot;t_1&quot; type=&quot;open&quot;&gt;
-      &lt;span&gt;
-        &lt;target id=&quot;w1&quot;/&gt;
-      &lt;/span&gt;
-    &lt;/term&gt;
-    &lt;term lemma=&quot;is&quot; morphofeat=&quot;FM&quot; pos=&quot;O&quot; tid=&quot;t_2&quot; type=&quot;open&quot;&gt;
-      &lt;span&gt;
-        &lt;target id=&quot;w2&quot;/&gt;
-      &lt;/span&gt;
-    &lt;/term&gt;
-    &lt;term lemma=&quot;an&quot; morphofeat=&quot;APPR&quot; pos=&quot;P&quot; tid=&quot;t_3&quot; type=&quot;close&quot;&gt;
-      &lt;span&gt;
-        &lt;target id=&quot;w3&quot;/&gt;
-      &lt;/span&gt;
-    &lt;/term&gt;
-    &lt;term lemma=&quot;english&quot; morphofeat=&quot;FM&quot; pos=&quot;O&quot; tid=&quot;t_4&quot; type=&quot;open&quot;&gt;
-      &lt;span&gt;
-        &lt;target id=&quot;w4&quot;/&gt;
-      &lt;/span&gt;
-    &lt;/term&gt;
-    &lt;term lemma=&quot;text&quot; morphofeat=&quot;FM&quot; pos=&quot;O&quot; tid=&quot;t_5&quot; type=&quot;open&quot;&gt;
-      &lt;span&gt;
-        &lt;target id=&quot;w5&quot;/&gt;
-      &lt;/span&gt;
-    &lt;/term&gt;
-  &lt;/terms&gt;
-&lt;/KAF&gt;</pre>
-    </p>
+<pre>
+{
+"text": "This is a very nice hotel in Amsterdam ",
+"language": "en",
+"terms": {
+"t_1": {
+"type": "close",
+"lemma": "this",
+"text": "This",
+"pos": "D",
+"morphofeat": "DT"
+},
+"t_2": {
+"type": "open",
+"lemma": "be",
+"text": "is",
+"pos": "V",
+"morphofeat": "VBZ"
+},
+"t_3": {
+"type": "close",
+"lemma": "a",
+"text": "a",
+"pos": "D",
+"morphofeat": "DT"
+},
+"t_4": {
+"type": "open",
+"lemma": "very",
+"text": "very",
+"pos": "A",
+"morphofeat": "RB",
+"polarity": ""
+},
+"t_5": {
+"type": "open",
+"lemma": "nice",
+"text": "nice",
+"pos": "G",
+"morphofeat": "JJ",
+"polarity": "positive"
+},
+"t_6": {
+"type": "open",
+"lemma": "hotel",
+"text": "hotel",
+"pos": "N",
+"morphofeat": "NN"
+},
+"t_7": {
+"type": "close",
+"lemma": "in",
+"text": "in",
+"pos": "P",
+"morphofeat": "IN"
+},
+"t_8": {
+"type": "open",
+"lemma": "Amsterdam",
+"text": "Amsterdam",
+"pos": "R",
+"morphofeat": "NP",
+"entity": "e15"
+}
+},
+"sentiments": [
+{
+"lexicon": "VUA_olery_lexicon_en_lmf",
+"polarity": "",
+"termId": "t_4",
+"text": "very"
+},
+{
+"lexicon": "VUA_olery_lexicon_en_lmf",
+"polarity": "positive",
+"termId": "t_5",
+"text": "nice"
+}
+],
+"entities": {
+"e15": {
+"type": "location",
+"text": "Amsterdam",
+"reference": "",
+"terms": [
+"t_8"
+]
+}
+},
+"opinions": {
+"o1": {
+"holder": "",
+"target": "",
+"polarity": "positive",
+"strength": "2",
+"text": "very nice",
+"terms": [
+"t_4",
+"t_5"
+]
+}
+}
+}</pre>
+</p>
 
-    <h2>Try the webservice</h2>
+<h2>Try the webservice</h2>
 
-    <p>* required</p>
-    <p>** When entering a value no response will be displayed in the browser.</p>
+<p>* required</p>
+<p>** When entering a value no response will be displayed in the browser.</p>
 
-    <form action="<%=url("/")%>" method="POST">
-      <div>
-        <label for="input"/>Type your text here*</label>
-        <br/>
+<form action="<%=url("/")%>" method="POST">
+<div>
+<label for="input"/>Type your text here*</label>
+<br/>
 
-        <textarea name="input" id="text" rows="10" cols="50"/></textarea>
-      </div>
+<textarea name="input" id="text" rows="10" cols="50"/></textarea>
+</div>
 
-      <% 10.times do |t| %>
-      <div>
-        <label for="callbacks">Callback URL <%=t+1%>(**)</label>
-        <br />
+<% 10.times do |t| %>
+<div>
+<label for="callbacks">Callback URL <%=t+1%>(**)</label>
+<br />
 
-        <input id="callbacks" type="text" name="callbacks[]" />
-      </div>
-      <% end %>
-
-
-      <div>
-        <label for="error_callback">Error Callback</label>
-        <br />
-
-        <input id="error_callback" type="text" name="error_callback" />
-      </div>
-      <input type="submit" value="Submit" />
-    </form>
-
-    <h2>Actions</h2>
-
-    <p>
-      <dl>
-        <dt>POST /</dt>
-        <dd>Convert the input KAF text. See arguments listing for more options.</dd>
-        <dt>GET /</dt>
-        <dd>Show this page</dd>
-      </dl>
-    </p>
-
-    <h2>Arguments</h2>
-
-    <p> The webservice takes the following arguments: </p>
-    <p>* required</p>
-
-    <dl>
-      <dt>text*</dt>
-      <dd>The input text in KAF format. Sample KAF input:</dd>
-      <pre>
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;KAF version=&quot;v1.opener&quot; xml:lang=&quot;en&quot;&gt;
-  &lt;kafHeader&gt;
-    &lt;linguisticProcessors layer=&quot;text&quot;&gt;
-      &lt;lp name=&quot;opennlp-en-tok&quot; timestamp=&quot;2013-06-11T13:41:37Z&quot; version=&quot;1.0&quot;/&gt;
-      &lt;lp name=&quot;opennlp-en-sent&quot; timestamp=&quot;2013-06-11T13:41:37Z&quot; version=&quot;1.0&quot;/&gt;
-    &lt;/linguisticProcessors&gt;
-  &lt;/kafHeader&gt;
-  &lt;text&gt;
-    &lt;wf length=&quot;4&quot; offset=&quot;0&quot; para=&quot;1&quot; sent=&quot;1&quot; wid=&quot;w1&quot;&gt;this&lt;/wf&gt;
-    &lt;wf length=&quot;2&quot; offset=&quot;5&quot; para=&quot;1&quot; sent=&quot;1&quot; wid=&quot;w2&quot;&gt;is&lt;/wf&gt;
-    &lt;wf length=&quot;2&quot; offset=&quot;8&quot; para=&quot;1&quot; sent=&quot;1&quot; wid=&quot;w3&quot;&gt;an&lt;/wf&gt;
-    &lt;wf length=&quot;7&quot; offset=&quot;11&quot; para=&quot;1&quot; sent=&quot;1&quot; wid=&quot;w4&quot;&gt;english&lt;/wf&gt;
-    &lt;wf length=&quot;4&quot; offset=&quot;19&quot; para=&quot;1&quot; sent=&quot;1&quot; wid=&quot;w5&quot;&gt;text&lt;/wf&gt;
-  &lt;/text&gt;
-&lt;/KAF&gt;</pre>
-
-      <dt>callbacks</dt>
-      <dd>
-            You can provide a list of callback urls. If you provide callback urls
-            the POS tagger will run as a background job and a callback
-            with the results will be performed (POST) to the first url in the callback
-            list. The other urls in callback list will be provided in the "callbacks"
-            argument.<br/><br/>
-            Using callback you can chain together several OpeNER webservices in
-        one call. The first, will call the second, which will call the third, etc.
-        See for more information the <a href="http://opener-project.github.io">
-          webservice documentation online</a>.
-      </dd>
-      <dt>error_callback</dt>
-      <dd>URL to notify if errors occur in the background process. The error
-      callback will do a POST with the error message in the 'error' field.</dd>
-      </dt>
+<input id="callbacks" type="text" name="callbacks[]" />
+</div>
+<% end %>
 
 
+<div>
+<label for="error_callback">Error Callback</label>
+<br />
 
-    </dl>
+<input id="error_callback" type="text" name="error_callback" />
+</div>
+<input type="submit" value="Submit" />
+</form>
+
+<h2>Actions</h2>
+
+<p>
+<dl>
+<dt>POST /</dt>
+<dd>Convert the input KAF text. See arguments listing for more options.</dd>
+<dt>GET /</dt>
+<dd>Show this page</dd>
+</dl>
+</p>
+
+<h2>Arguments</h2>
+
+<p> The webservice takes the following arguments: </p>
+<p>* required</p>
+
+<dl>
+<dt>text*</dt>
+<dd>The input text in KAF format. Sample KAF input:</dd>
+<pre>
+&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+&lt;KAF xml:lang=&quot;en&quot;&gt;
+&lt;kafHeader&gt;
+&lt;linguisticProcessors layer=&quot;text&quot;&gt;
+&lt;lp timestamp=&quot;2013-04-11T09:21:29CEST&quot; version=&quot;1.0&quot; name=&quot;Open-nlp sentence splitter&quot;/&gt;
+&lt;lp timestamp=&quot;2013-04-11T09:21:29CEST&quot; version=&quot;1.0&quot; name=&quot;Open-nlp tokenizer&quot;/&gt;
+&lt;/linguisticProcessors&gt;
+&lt;linguisticProcessors layer=&quot;opinions&quot;&gt;
+&lt;lp timestamp=&quot;*&quot; version=&quot;1.0&quot; name=&quot;Basic opinion detector with Pos&quot;/&gt;
+&lt;/linguisticProcessors&gt;
+&lt;linguisticProcessor layer=&quot;terms&quot;&gt;
+&lt;lp timestamp=&quot;2013-04-11T09:23:08CEST&quot; version=&quot;1.0&quot; name=&quot;Basic_polarity_tagger_with_pos&quot;/&gt;
+&lt;/linguisticProcessor&gt;
+&lt;linguisticProcessor layer=&quot;term&quot;&gt;
+&lt;lp timestamp=&quot;2013-04-11T09:23:07CEST&quot; version=&quot;1.0&quot; name=&quot;TreeTagger_from_kaf&quot;/&gt;
+&lt;/linguisticProcessor&gt;
+&lt;/kafHeader&gt;
+&lt;text&gt;
+&lt;wf wid=&quot;w_1&quot; sent=&quot;s_1&quot;&gt;This&lt;/wf&gt;
+&lt;wf wid=&quot;w_2&quot; sent=&quot;s_1&quot;&gt;is&lt;/wf&gt;
+&lt;wf wid=&quot;w_3&quot; sent=&quot;s_1&quot;&gt;a&lt;/wf&gt;
+&lt;wf wid=&quot;w_4&quot; sent=&quot;s_1&quot;&gt;very&lt;/wf&gt;
+&lt;wf wid=&quot;w_5&quot; sent=&quot;s_1&quot;&gt;nice&lt;/wf&gt;
+&lt;wf wid=&quot;w_6&quot; sent=&quot;s_1&quot;&gt;hotel&lt;/wf&gt;
+&lt;wf wid=&quot;w_7&quot; sent=&quot;s_1&quot;&gt;in&lt;/wf&gt;
+&lt;wf wid=&quot;w_8&quot; sent=&quot;s_1&quot;&gt;Amsterdam&lt;/wf&gt;
+&lt;/text&gt;
+&lt;terms&gt;
+&lt;term tid=&quot;t_1&quot; lemma=&quot;this&quot; morphofeat=&quot;DT&quot; type=&quot;close&quot; pos=&quot;D&quot;&gt;
+&lt;span&gt;
+&lt;target id=&quot;w_1&quot;/&gt;
+&lt;/span&gt;
+&lt;/term&gt;
+&lt;term tid=&quot;t_2&quot; lemma=&quot;be&quot; morphofeat=&quot;VBZ&quot; type=&quot;open&quot; pos=&quot;V&quot;&gt;
+&lt;span&gt;
+&lt;target id=&quot;w_2&quot;/&gt;
+&lt;/span&gt;
+&lt;/term&gt;
+&lt;term tid=&quot;t_3&quot; lemma=&quot;a&quot; morphofeat=&quot;DT&quot; type=&quot;close&quot; pos=&quot;D&quot;&gt;
+&lt;span&gt;
+&lt;target id=&quot;w_3&quot;/&gt;
+&lt;/span&gt;
+&lt;/term&gt;
+&lt;term tid=&quot;t_4&quot; lemma=&quot;very&quot; morphofeat=&quot;RB&quot; type=&quot;open&quot; pos=&quot;A&quot;&gt;
+&lt;span&gt;
+&lt;target id=&quot;w_4&quot;/&gt;
+&lt;/span&gt;
+&lt;sentiment sentiment_modifier=&quot;intensifier&quot; resource=&quot;VUA_olery_lexicon_en_lmf&quot;/&gt;
+&lt;/term&gt;
+&lt;term tid=&quot;t_5&quot; lemma=&quot;nice&quot; morphofeat=&quot;JJ&quot; type=&quot;open&quot; pos=&quot;G&quot;&gt;
+&lt;span&gt;
+&lt;target id=&quot;w_5&quot;/&gt;
+&lt;/span&gt;
+&lt;sentiment polarity=&quot;positive&quot; resource=&quot;VUA_olery_lexicon_en_lmf&quot;/&gt;
+&lt;/term&gt;
+&lt;term tid=&quot;t_6&quot; lemma=&quot;hotel&quot; morphofeat=&quot;NN&quot; type=&quot;open&quot; pos=&quot;N&quot;&gt;
+&lt;span&gt;
+&lt;target id=&quot;w_6&quot;/&gt;
+&lt;/span&gt;
+&lt;/term&gt;
+&lt;term tid=&quot;t_7&quot; lemma=&quot;in&quot; morphofeat=&quot;IN&quot; type=&quot;close&quot; pos=&quot;P&quot;&gt;
+&lt;span&gt;
+&lt;target id=&quot;w_7&quot;/&gt;
+&lt;/span&gt;
+&lt;/term&gt;
+&lt;term tid=&quot;t_8&quot; lemma=&quot;Amsterdam&quot; morphofeat=&quot;NP&quot; type=&quot;open&quot; pos=&quot;R&quot;&gt;
+&lt;span&gt;
+&lt;target id=&quot;w_8&quot;/&gt;
+&lt;/span&gt;
+&lt;/term&gt;
+&lt;/terms&gt;
+&lt;entities&gt;
+&lt;entity eid=&quot;e15&quot; type=&quot;location&quot;&gt;
+&lt;references&gt;
+&lt;span&gt;
+&lt;!--Amsterdam --&gt;
+&lt;target id=&quot;t_8&quot;/&gt;
+&lt;/span&gt;
+&lt;/references&gt;
+&lt;/entity&gt;
+&lt;/entities&gt;
+&lt;opinions&gt;
+&lt;opinion oid=&quot;o1&quot;&gt;
+&lt;opinion_target&gt;
+&lt;!--hotel--&gt;
+&lt;span&gt;
+&lt;target id=&quot;t_6&quot;/&gt;
+&lt;/span&gt;
+&lt;/opinion_target&gt;
+&lt;opinion_expression polarity=&quot;positive&quot; strength=&quot;2&quot;&gt;
+&lt;!--very nice--&gt;
+&lt;span&gt;
+&lt;target id=&quot;t_4&quot;/&gt;
+&lt;target id=&quot;t_5&quot;/&gt;
+&lt;/span&gt;
+&lt;/opinion_expression&gt;
+&lt;/opinion&gt;
+&lt;/opinions&gt;
+&lt;/KAF&gt;
+</pre>
+
+<dt>callbacks</dt>
+<dd>
+You can provide a list of callback urls. If you provide callback urls
+the POS tagger will run as a background job and a callback
+with the results will be performed (POST) to the first url in the callback
+list. The other urls in callback list will be provided in the "callbacks"
+argument.<br/><br/>
+Using callback you can chain together several OpeNER webservices in
+one call. The first, will call the second, which will call the third, etc.
+See for more information the <a href="http://opener-project.github.io">
+webservice documentation online</a>.
+</dd>
+<dt>error_callback</dt>
+<dd>URL to notify if errors occur in the background process. The error
+callback will do a POST with the error message in the 'error' field.</dd>
+</dt>
 
 
-    <p>
 
-    </p>
+</dl>
 
-  </body>
+
+<p>
+
+</p>
+
+</body>
 </html>
