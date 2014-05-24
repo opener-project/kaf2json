@@ -1,4 +1,4 @@
-{	
+{
 	"text"      : "Free sauna , hamman and swimming pool . Hotel very well located in front of the station . A train to Ams is leanving every 10 minutes . ",
 	"language"  : "en",
 	"terms"     : {
@@ -9,7 +9,12 @@
 		"text"       :"Free",
 		"pos"        :"G",
 		"morphofeat" :"JJ",
-		"polarity"   :"positive"
+		"sentiment"  :
+		{
+			"lexicon" :"VUA_olery_lexicon_en_lmf",
+			"polarity":"positive"
+		}
+
 	},
  	"t2":
 	{
@@ -82,7 +87,11 @@
 		"text"       :"very",
 		"pos"        :"A",
 		"morphofeat" :"RB",
-		"polarity"   :""
+		"sentiment"  :
+		{
+			"lexicon" :"VUA_olery_lexicon_en_lmf"
+		}
+
 	},
  	"t11":
 	{
@@ -91,7 +100,12 @@
 		"text"       :"well",
 		"pos"        :"A",
 		"morphofeat" :"RB",
-		"polarity"   :"positive"
+		"sentiment"  :
+		{
+			"lexicon" :"VUA_olery_lexicon_en_lmf",
+			"polarity":"positive"
+		}
+
 	},
  	"t12":
 	{
@@ -205,7 +219,11 @@
 		"text"       :"every",
 		"pos"        :"D",
 		"morphofeat" :"DT",
-		"polarity"   :""
+		"sentiment"  :
+		{
+			"lexicon" :"VUA_olery_lexicon_en_lmf"
+		}
+
 	},
  	"t26":
 	{
@@ -231,31 +249,35 @@
 		"pos"        :"O",
 		"morphofeat" :"."
 	}},
-	"sentiments": [
-{
-	"lexicon" :"VUA_olery_lexicon_en_lmf",
-	"polarity":"positive",
-	"termId"  :"t1",
-	"text"    :"Free"
-},
-{
-	"lexicon" :"VUA_olery_lexicon_en_lmf",
-	"polarity":"",
-	"termId"  :"t10",
-	"text"    :"very"
-},
-{
-	"lexicon" :"VUA_olery_lexicon_en_lmf",
-	"polarity":"positive",
-	"termId"  :"t11",
-	"text"    :"well"
-},
-{
-	"lexicon" :"VUA_olery_lexicon_en_lmf",
-	"polarity":"",
-	"termId"  :"t25",
-	"text"    :"every"
-}],
+	"sentiments": {
+	"s1":
+	{
+		"lexicon" :"VUA_olery_lexicon_en_lmf",
+		"polarity":"positive",
+		"termId"  :"t1",
+		"text"    :"Free"
+	},
+	"s2":
+	{
+		"lexicon" :"VUA_olery_lexicon_en_lmf",
+		
+		"termId"  :"t10",
+		"text"    :"very"
+	},
+	"s3":
+	{
+		"lexicon" :"VUA_olery_lexicon_en_lmf",
+		"polarity":"positive",
+		"termId"  :"t11",
+		"text"    :"well"
+	},
+	"s4":
+	{
+		"lexicon" :"VUA_olery_lexicon_en_lmf",
+		
+		"termId"  :"t25",
+		"text"    :"every"
+	}},
 	"entities"  : {
  	"e1":
 	{
@@ -264,5 +286,42 @@
 		"reference":"http://dbpedia.org/resource/Amsterdam_(Amtrak_station)",
 		"terms"    :["t22"]
 	}},
-	"opinions"  : {}
+	"opinions"  : {},
+	"lp"        : [
+{
+	"name"     :"opennlp-en-tok",
+	"timestamp":"2013-07-11T15:30:27Z",
+	"version"  :"1.0",
+	"layer"    :"text"
+},
+{
+	"name"     :"opennlp-en-sent",
+	"timestamp":"2013-07-11T15:30:27Z",
+	"version"  :"1.0",
+	"layer"    :"text"
+},
+{
+	"name"     :"ehu-pos-en",
+	"timestamp":"2013-07-11 15:30:28",
+	"version"  :"1.0",
+	"layer"    :"terms"
+},
+{
+	"name"     :"Basic_polarity_tagger_with_pos",
+	"timestamp":"2013-07-11T15:30:29UTC",
+	"version"  :"1.0",
+	"layer"    :"terms"
+},
+{
+	"name"     :"ehu-dbpedia-spotlight",
+	"timestamp":"2013-07-11 15:30:31",
+	"version"  :"1.0",
+	"layer"    :"ehu-ned"
+},
+{
+	"name"     :"ehu-nerc-en",
+	"timestamp":"2013-07-11 15:30:30",
+	"version"  :"1.0",
+	"layer"    :"entities"
+}]
 }

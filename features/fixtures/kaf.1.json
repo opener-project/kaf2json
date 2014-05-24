@@ -1,4 +1,4 @@
-{	
+{
 	"text"      : "Stayed one night at the Albus , picked it because of the location which was very close to everything . The room was lovely , however it was a bit noisy because it was in the basement close to the kitchen . The major problem we had with the hotel was on check out when we inquired about how long it takes to get the train from Amsterdam to the airport , and the lady working on the desk told us that the trains were not running that day . She told us that they had a special deal with a taxi company and that she could book us a taxi to the airport for €40 . She also told us that we should book the taxi straight away as it , as it had to be booked a minimum of 2 hrs before we needed it . ",
 	"language"  : "en",
 	"terms"     : {
@@ -130,7 +130,12 @@
 		"text"       :"very",
 		"pos"        :"A",
 		"morphofeat" :"RB",
-		"polarity"   :""
+		"sentiment"  :
+		{
+			"lexicon" :"VUA_olery_lexicon_en_lmf"
+		}
+,
+		"opinion"    :"o1"
 	},
  	"t17":
 	{
@@ -139,7 +144,13 @@
 		"text"       :"close",
 		"pos"        :"G",
 		"morphofeat" :"JJ",
-		"polarity"   :"positive"
+		"sentiment"  :
+		{
+			"lexicon" :"VUA_olery_lexicon_en_lmf",
+			"polarity":"positive"
+		}
+,
+		"opinion"    :"o1"
 	},
  	"t18":
 	{
@@ -147,7 +158,8 @@
 		"lemma"      :"to",
 		"text"       :"to",
 		"pos"        :"P",
-		"morphofeat" :"TO"
+		"morphofeat" :"TO",
+		"opinion"    :"o1"
 	},
  	"t19":
 	{
@@ -156,7 +168,12 @@
 		"text"       :"everything",
 		"pos"        :"N",
 		"morphofeat" :"NN",
-		"polarity"   :""
+		"sentiment"  :
+		{
+			"lexicon" :"VUA_olery_lexicon_en_lmf"
+		}
+,
+		"opinion"    :"o1"
 	},
  	"t20":
 	{
@@ -172,7 +189,8 @@
 		"lemma"      :"the",
 		"text"       :"The",
 		"pos"        :"D",
-		"morphofeat" :"DT"
+		"morphofeat" :"DT",
+		"opinion"    :"o2"
 	},
  	"t22":
 	{
@@ -180,7 +198,8 @@
 		"lemma"      :"room",
 		"text"       :"room",
 		"pos"        :"N",
-		"morphofeat" :"NN"
+		"morphofeat" :"NN",
+		"opinion"    :"o2"
 	},
  	"t23":
 	{
@@ -197,7 +216,13 @@
 		"text"       :"lovely",
 		"pos"        :"A",
 		"morphofeat" :"RB",
-		"polarity"   :"positive"
+		"sentiment"  :
+		{
+			"lexicon" :"VUA_olery_lexicon_en_lmf",
+			"polarity":"positive"
+		}
+,
+		"opinion"    :"o2"
 	},
  	"t25":
 	{
@@ -254,7 +279,12 @@
 		"text"       :"noisy",
 		"pos"        :"A",
 		"morphofeat" :"RB",
-		"polarity"   :"negative"
+		"sentiment"  :
+		{
+			"lexicon" :"VUA_olery_lexicon_en_lmf",
+			"polarity":"negative"
+		}
+
 	},
  	"t32":
 	{
@@ -311,7 +341,12 @@
 		"text"       :"close",
 		"pos"        :"N",
 		"morphofeat" :"NN",
-		"polarity"   :"negative"
+		"sentiment"  :
+		{
+			"lexicon" :"VUA_olery_lexicon_en_lmf",
+			"polarity":"negative"
+		}
+
 	},
  	"t39":
 	{
@@ -351,7 +386,8 @@
 		"lemma"      :"the",
 		"text"       :"The",
 		"pos"        :"D",
-		"morphofeat" :"DT"
+		"morphofeat" :"DT",
+		"opinion"    :"o3"
 	},
  	"t44":
 	{
@@ -360,7 +396,12 @@
 		"text"       :"major",
 		"pos"        :"G",
 		"morphofeat" :"JJ",
-		"polarity"   :""
+		"sentiment"  :
+		{
+			"lexicon" :"VUA_olery_lexicon_en_lmf"
+		}
+,
+		"opinion"    :"o3"
 	},
  	"t45":
 	{
@@ -369,7 +410,13 @@
 		"text"       :"problem",
 		"pos"        :"N",
 		"morphofeat" :"NN",
-		"polarity"   :"negative"
+		"sentiment"  :
+		{
+			"lexicon" :"VUA_olery_lexicon_en_lmf",
+			"polarity":"negative"
+		}
+,
+		"opinion"    :"o3"
 	},
  	"t46":
 	{
@@ -699,7 +746,11 @@
 		"text"       :"not",
 		"pos"        :"A",
 		"morphofeat" :"RB",
-		"polarity"   :""
+		"sentiment"  :
+		{
+			"lexicon" :"VUA_olery_lexicon_en_lmf"
+		}
+
 	},
  	"t87":
 	{
@@ -796,7 +847,13 @@
 		"text"       :"special",
 		"pos"        :"G",
 		"morphofeat" :"JJ",
-		"polarity"   :"positive"
+		"sentiment"  :
+		{
+			"lexicon" :"VUA_olery_lexicon_en_lmf",
+			"polarity":"positive"
+		}
+,
+		"opinion"    :"o4"
 	},
  	"t99":
 	{
@@ -804,7 +861,8 @@
 		"lemma"      :"deal",
 		"text"       :"deal",
 		"pos"        :"N",
-		"morphofeat" :"NN"
+		"morphofeat" :"NN",
+		"opinion"    :"o4"
 	},
  	"t100":
 	{
@@ -812,7 +870,8 @@
 		"lemma"      :"with",
 		"text"       :"with",
 		"pos"        :"P",
-		"morphofeat" :"IN"
+		"morphofeat" :"IN",
+		"opinion"    :"o4"
 	},
  	"t101":
 	{
@@ -820,7 +879,8 @@
 		"lemma"      :"a",
 		"text"       :"a",
 		"pos"        :"D",
-		"morphofeat" :"DT"
+		"morphofeat" :"DT",
+		"opinion"    :"o4"
 	},
  	"t102":
 	{
@@ -828,7 +888,8 @@
 		"lemma"      :"taxi",
 		"text"       :"taxi",
 		"pos"        :"N",
-		"morphofeat" :"NN"
+		"morphofeat" :"NN",
+		"opinion"    :"o4"
 	},
  	"t103":
 	{
@@ -836,7 +897,8 @@
 		"lemma"      :"company",
 		"text"       :"company",
 		"pos"        :"N",
-		"morphofeat" :"NN"
+		"morphofeat" :"NN",
+		"opinion"    :"o4"
 	},
  	"t104":
 	{
@@ -1181,7 +1243,12 @@
 		"text"       :"needed",
 		"pos"        :"V",
 		"morphofeat" :"VBD",
-		"polarity"   :"negative"
+		"sentiment"  :
+		{
+			"lexicon" :"VUA_olery_lexicon_en_lmf",
+			"polarity":"negative"
+		}
+
 	},
  	"t147":
 	{
@@ -1199,73 +1266,84 @@
 		"pos"        :"O",
 		"morphofeat" :"."
 	}},
-	"sentiments": [
-{
-	"lexicon" :"VUA_olery_lexicon_en_lmf",
-	"polarity":"",
-	"termId"  :"t16",
-	"text"    :"very"
-},
-{
-	"lexicon" :"VUA_olery_lexicon_en_lmf",
-	"polarity":"positive",
-	"termId"  :"t17",
-	"text"    :"close"
-},
-{
-	"lexicon" :"VUA_olery_lexicon_en_lmf",
-	"polarity":"",
-	"termId"  :"t19",
-	"text"    :"everything"
-},
-{
-	"lexicon" :"VUA_olery_lexicon_en_lmf",
-	"polarity":"positive",
-	"termId"  :"t24",
-	"text"    :"lovely"
-},
-{
-	"lexicon" :"VUA_olery_lexicon_en_lmf",
-	"polarity":"negative",
-	"termId"  :"t31",
-	"text"    :"noisy"
-},
-{
-	"lexicon" :"VUA_olery_lexicon_en_lmf",
-	"polarity":"negative",
-	"termId"  :"t38",
-	"text"    :"close"
-},
-{
-	"lexicon" :"VUA_olery_lexicon_en_lmf",
-	"polarity":"",
-	"termId"  :"t44",
-	"text"    :"major"
-},
-{
-	"lexicon" :"VUA_olery_lexicon_en_lmf",
-	"polarity":"negative",
-	"termId"  :"t45",
-	"text"    :"problem"
-},
-{
-	"lexicon" :"VUA_olery_lexicon_en_lmf",
-	"polarity":"",
-	"termId"  :"t86",
-	"text"    :"not"
-},
-{
-	"lexicon" :"VUA_olery_lexicon_en_lmf",
-	"polarity":"positive",
-	"termId"  :"t98",
-	"text"    :"special"
-},
-{
-	"lexicon" :"VUA_olery_lexicon_en_lmf",
-	"polarity":"negative",
-	"termId"  :"t146",
-	"text"    :"needed"
-}],
+	"sentiments": {
+	"s1":
+	{
+		"lexicon" :"VUA_olery_lexicon_en_lmf",
+		
+		"termId"  :"t16",
+		"text"    :"very"
+	},
+	"s2":
+	{
+		"lexicon" :"VUA_olery_lexicon_en_lmf",
+		"polarity":"positive",
+		"termId"  :"t17",
+		"text"    :"close"
+	},
+	"s3":
+	{
+		"lexicon" :"VUA_olery_lexicon_en_lmf",
+		
+		"termId"  :"t19",
+		"text"    :"everything"
+	},
+	"s4":
+	{
+		"lexicon" :"VUA_olery_lexicon_en_lmf",
+		"polarity":"positive",
+		"termId"  :"t24",
+		"text"    :"lovely"
+	},
+	"s5":
+	{
+		"lexicon" :"VUA_olery_lexicon_en_lmf",
+		"polarity":"negative",
+		"termId"  :"t31",
+		"text"    :"noisy"
+	},
+	"s6":
+	{
+		"lexicon" :"VUA_olery_lexicon_en_lmf",
+		"polarity":"negative",
+		"termId"  :"t38",
+		"text"    :"close"
+	},
+	"s7":
+	{
+		"lexicon" :"VUA_olery_lexicon_en_lmf",
+		
+		"termId"  :"t44",
+		"text"    :"major"
+	},
+	"s8":
+	{
+		"lexicon" :"VUA_olery_lexicon_en_lmf",
+		"polarity":"negative",
+		"termId"  :"t45",
+		"text"    :"problem"
+	},
+	"s9":
+	{
+		"lexicon" :"VUA_olery_lexicon_en_lmf",
+		
+		"termId"  :"t86",
+		"text"    :"not"
+	},
+	"s10":
+	{
+		"lexicon" :"VUA_olery_lexicon_en_lmf",
+		"polarity":"positive",
+		"termId"  :"t98",
+		"text"    :"special"
+	},
+	"s11":
+	{
+		"lexicon" :"VUA_olery_lexicon_en_lmf",
+		"polarity":"negative",
+		"termId"  :"t146",
+		"text"    :"needed"
+	}},
 	"entities"  : {
  	"e1":
 	{
@@ -1283,39 +1361,76 @@
 	}},
 	"opinions"  : {
  	"o1":
-	{
-		"holder"    :"",
-		"target"    :"",
+	{   
+		"holder"    :[],
+		"target"    :[],
+		"expression":["t16","t17","t18","t19"],
 		"polarity"  :"positive",
 		"strength"  :"1",
-		"text"      :"very close to everything",
-		"terms"     :["t16","t17","t18","t19"]
+		"text"      :"very close to everything"
 	},
  	"o2":
-	{
-		"holder"    :"",
-		"target"    :"",
+	{   
+		"holder"    :[],
+		"target"    :["t21","t22"],
+		"expression":["t24"],
 		"polarity"  :"positive",
 		"strength"  :"1",
-		"text"      :"lovely",
-		"terms"     :["t24"]
+		"text"      :"lovely"
 	},
  	"o3":
-	{
-		"holder"    :"",
-		"target"    :"",
+	{   
+		"holder"    :[],
+		"target"    :[],
+		"expression":["t43","t44","t45"],
 		"polarity"  :"negative",
 		"strength"  :"1",
-		"text"      :"The major problem",
-		"terms"     :["t43","t44","t45"]
+		"text"      :"The major problem"
 	},
  	"o4":
-	{
-		"holder"    :"",
-		"target"    :"",
+	{   
+		"holder"    :[],
+		"target"    :[],
+		"expression":["t98","t99","t100","t101","t102","t103"],
 		"polarity"  :"positive",
 		"strength"  :"1",
-		"text"      :"special deal with a taxi company",
-		"terms"     :["t98","t99","t100","t101","t102","t103"]
-	}}
+		"text"      :"special deal with a taxi company"
+	}},
+	"lp"        : [
+{
+	"name"     :"opennlp-en-tok",
+	"timestamp":"2013-07-01T14:49:42Z",
+	"version"  :"1.0",
+	"layer"    :"text"
+},
+{
+	"name"     :"opennlp-en-sent",
+	"timestamp":"2013-07-01T14:49:42Z",
+	"version"  :"1.0",
+	"layer"    :"text"
+},
+{
+	"name"     :"ehu-pos-en",
+	"timestamp":"2013-07-01 14:52:26",
+	"version"  :"1.0",
+	"layer"    :"terms"
+},
+{
+	"name"     :"Basic_polarity_tagger_with_pos",
+	"timestamp":"2013-07-01T14:52:27UTC",
+	"version"  :"1.0",
+	"layer"    :"terms"
+},
+{
+	"name"     :"ehu-nerc-en",
+	"timestamp":"2013-07-01 14:52:59",
+	"version"  :"1.0",
+	"layer"    :"entities"
+},
+{
+	"name"     :"Crfsuite machine learning opinion miner",
+	"timestamp":"2013-07-01T16:55:07CEST",
+	"version"  :"1.0",
+	"layer"    :"opinions"
+}]
 }
