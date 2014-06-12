@@ -1,7 +1,8 @@
+require 'saxon-xslt'
+
 require_relative 'kaf_to_json/version'
 require_relative 'kaf_to_json/server'
-
-require 'saxon-xslt'
+require_relative 'kaf_to_json/error_layer'
 
 
 
@@ -43,9 +44,14 @@ module Opener
     # @return [Array]
     #
     def run(input)
-      doc = Saxon::XML(input)
-      xslt = Saxon::XSLT(File.read(xsl))
-      xslt.transform(doc).to_string
+      begin
+        doc = Saxon::XML(input)
+        xslt = Saxon::XSLT(File.read(xsl))
+        return xslt.transform(doc).to_string
+        
+      rescue Exception => error
+        return ErrorLayer.new(input, error.message, self.class).add
+      end
     end
     
     alias tag run
