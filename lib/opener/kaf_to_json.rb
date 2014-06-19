@@ -1,4 +1,5 @@
 require 'saxon-xslt'
+require 'opener/core'
 
 require_relative 'kaf_to_json/version'
 require_relative 'kaf_to_json/server'
