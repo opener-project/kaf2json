@@ -2,9 +2,6 @@ require 'saxon-xslt'
 
 require_relative 'kaf_to_json/version'
 require_relative 'kaf_to_json/server'
-require_relative 'kaf_to_json/error_layer'
-
-
 
 module Opener
   ##
@@ -50,7 +47,7 @@ module Opener
         return xslt.transform(doc).to_string
         
       rescue Exception => error
-        return ErrorLayer.new(input, error.message, self.class).add
+        return Opener::Core::ErrorLayer.new(input, error.message, self.class).add
       end
     end
     
