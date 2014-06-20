@@ -3,27 +3,39 @@
 
 <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 KAF2JOSN
-This module convert an xml kaf document into Jsonversion 1.2
+This module convert an xml kaf document into Json version 1.2
 
-date 23/05/2014
 Author Andrea Marchetti 
 OpeNER Project
+
+19/06/2014
+- sentiments,entities,opinions are inserted into json only if there are into kaf
+- fixed double quote
+
+23/05/2014
+This new version fixes some bugs on opinions  and
+makes some enhancements on sentiments
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
 <xsl:output method="text" encoding="utf-8" omit-xml-declaration="yes"/>
 
 <xsl:template match="/">{
 	"text"      : "<xsl:apply-templates select="KAF/text/wf"                           />",
 	"language"  : "<xsl:value-of        select="KAF/@xml:lang"                         />",
 	"terms"     : {<xsl:apply-templates select="KAF/terms/term"                        />},
-	"sentiments": {<xsl:apply-templates select="KAF/terms/term/sentiment"              />},
-	"entities"  : {<xsl:apply-templates select="KAF/entities/entity"                   />},
-	"opinions"  : {<xsl:apply-templates select="KAF/opinions/opinion"                  />},
+	<xsl:if test="KAF/terms/term/sentiment">"sentiments"  : {<xsl:apply-templates select="KAF/terms/term/sentiment"/>},</xsl:if>
+	<xsl:if test="KAF/entities/entity"     >"entities"    : {<xsl:apply-templates select="KAF/entities/entity"     />},</xsl:if>
+	<xsl:if test="KAF/opinions/opinion"    >"opinions"    : {<xsl:apply-templates select="KAF/opinions/opinion"    />},</xsl:if>
+	<!-- xsl:if test="KAF/coreferences/coref"  >"coreferences": {<xsl:apply-templates select="KAF/coreferences/coref"  />},</xsl:if -->
 	"lp"        : [<xsl:apply-templates select="KAF/kafHeader//lp"                     />]
 }
 </xsl:template>
 
 <xsl:template match="wf">
-	<xsl:value-of select="."/><xsl:text> </xsl:text>
+	<xsl:choose>
+		<xsl:when test=".='&quot;'"><xsl:text>\"</xsl:text></xsl:when>
+		<xsl:otherwise><xsl:value-of select="."/><xsl:text> </xsl:text></xsl:otherwise>
+	</xsl:choose>
 </xsl:template>
 
 <!-- Levels -->
@@ -37,12 +49,13 @@ OpeNER Project
 </xsl:template>
 
 
+
 <xsl:template match="term">
 	<xsl:variable name="termId" select="@tid"/>
  	"<xsl:value-of select="$termId"/>":
 	{
 		"type"       :"<xsl:value-of select="@type"              />",
-		"lemma"      :"<xsl:value-of select="@lemma"             />",
+		"lemma"      :"<xsl:choose><xsl:when test="@lemma='&quot;'">\"</xsl:when><xsl:otherwise><xsl:value-of select="@lemma"/></xsl:otherwise></xsl:choose>",
 		"text"       :"<xsl:call-template name="termInside2"     />",
 		"pos"        :"<xsl:value-of select="@pos"               />",
 		"morphofeat" :"<xsl:value-of select="@morphofeat"        />"<xsl:if test="sentiment">,
@@ -78,6 +91,7 @@ OpeNER Project
 		"type"     :"<xsl:value-of select="@type"                                      />",
 		"text"     :"<xsl:call-template name="entityInside"                            />",
 		"reference":"<xsl:value-of select="externalReferences/externalRef/@reference"  />",
+		"resource" :"<xsl:value-of select="externalReferences/externalRef/@resource"  />",
 		"terms"    :[<xsl:apply-templates select="references"/>]
 	}<xsl:if test="position()!=last()"><xsl:text>,</xsl:text></xsl:if>
 </xsl:template>
@@ -99,6 +113,11 @@ OpeNER Project
 	}<xsl:if test="position()!=last()"><xsl:text>,</xsl:text></xsl:if>
 </xsl:template>
 
+<xsl:template match="coref">
+ 	"<xsl:value-of select="@coid"/>":
+	{   
+	}<xsl:if test="position()!=last()"><xsl:text>,</xsl:text></xsl:if>
+</xsl:template>
 
 <xsl:template match="opinion_expression|opinion_target|opinion_holder">
 	<xsl:call-template name="termList"/>
@@ -159,6 +178,11 @@ OpeNER Project
 
 <xsl:template name="word">
 	<xsl:param name="id"/>
-	<xsl:value-of select="//wf[@wid=$id]"/>
+	<xsl:variable name="word" select="//wf[@wid=$id]"/>
+	<xsl:choose>
+		<xsl:when test="$word='&quot;'"><xsl:text>\"</xsl:text></xsl:when>
+		<xsl:otherwise><xsl:value-of select="$word"/></xsl:otherwise>
+	</xsl:choose>
 </xsl:template>
+
 </xsl:stylesheet>
