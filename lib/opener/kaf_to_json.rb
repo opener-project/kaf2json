@@ -1,65 +1,48 @@
+require 'slop'
 require 'saxon-xslt'
-require 'opener/core'
 
 require_relative 'kaf_to_json/version'
 require_relative 'kaf_to_json/server'
+require_relative 'kaf_to_json/cli'
 
 module Opener
   ##
-  # Primary POS tagger class that delegates work the various POS tagging
-  # kernels.
-  #
-  # @!attribute [r] options
-  #  @return [Hash]
+  # Component for converting KAF documents to JSON objects.
   #
   class KafToJson
-    attr_reader :options
+    ##
+    # This method takes a single argument that is ignored to ensure
+    # compatibility with all the other OpeNER components.
+    #
+    def initialize(*); end
 
     ##
-    # Hash containing the default options to use.
-    #
-    # @return [Hash]
-    #
-    DEFAULT_OPTIONS = {
-      :args => []
-    }.freeze
-
-    ##
-    # @param [Hash] options
-    #
-    # @option options [Array] :args Arbitrary arguments to pass to the
-    #  underlying kernel.
-    #
-    def initialize(options = {})
-      @options = DEFAULT_OPTIONS.merge(options)
-    end
-
-    ##
-    # Processes the input and returns an Array containing the output of STDOUT,
-    # STDERR and an object containing process information.
+    # Processes the input KAF document and returns a String containing the JSON
+    # output.
     #
     # @param [String] input The input to process.
-    # @return [Array]
+    # @return [String]
     #
     def run(input)
-      begin
-        doc = Saxon::XML(input)
-        xslt = Saxon::XSLT(File.read(xsl))
-        return xslt.transform(doc).to_s
-        
-      rescue Exception => error
-        return Opener::Core::ErrorLayer.new(input, error.message, self.class).add
-      end
+      doc  = Saxon::XML(input)
+      xslt = Saxon::XSLT(File.read(xsl))
+
+      return xslt.transform(doc).to_s
     end
-    
+
     alias tag run
-    
+
+    ##
+    # The output type to use in the webservices.
+    #
+    # @return [Symbol]
+    #
     def output_type
       return :json
     end
-    
+
     private
-    
+
     ##
     # @return [String]
     #
@@ -75,4 +58,3 @@ module Opener
     end
   end # KafToJson
 end # Opener
-

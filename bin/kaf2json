@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
+
 require_relative '../lib/opener/kaf_to_json'
 
-cli = Opener::KafToJson.new(:args => ARGV)
+cli = Opener::KafToJson::CLI.new
 
-puts cli.run(STDIN.tty? ? nil : STDIN.read)
+cli.run
