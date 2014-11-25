@@ -45,7 +45,7 @@ module Opener
       begin
         doc = Saxon::XML(input)
         xslt = Saxon::XSLT(File.read(xsl))
-        return xslt.transform(doc).to_string
+        return xslt.transform(doc).to_s
         
       rescue Exception => error
         return Opener::Core::ErrorLayer.new(input, error.message, self.class).add
