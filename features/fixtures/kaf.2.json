@@ -249,7 +249,7 @@
 		"pos"        :"O",
 		"morphofeat" :"."
 	}},
-	"sentiments": {
+	"sentiments"  : {
 	"s1":
 	{
 		"lexicon" :"VUA_olery_lexicon_en_lmf",
@@ -277,16 +277,16 @@
 		
 		"termId"  :"t25",
 		"text"    :"every"
-	}},
-	"entities"  : {
+	}},"entities"    : {
  	"e1":
 	{
 		"type"     :"location",
 		"text"     :"Ams",
 		"reference":"http://dbpedia.org/resource/Amsterdam_(Amtrak_station)",
+		"resource" :"spotlight_v1",
 		"terms"    :["t22"]
 	}},
-	"opinions"  : {},
+	
 	"lp"        : [
 {
 	"name"     :"opennlp-en-tok",

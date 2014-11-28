@@ -1266,7 +1266,7 @@
 		"pos"        :"O",
 		"morphofeat" :"."
 	}},
-	"sentiments": {
+	"sentiments"  : {
 	"s1":
 	{
 		"lexicon" :"VUA_olery_lexicon_en_lmf",
@@ -1343,13 +1343,13 @@
 		"polarity":"negative",
 		"termId"  :"t146",
 		"text"    :"needed"
-	}},
-	"entities"  : {
+	}},"entities"    : {
  	"e1":
 	{
 		"type"     :"location",
 		"text"     :"Albus",
 		"reference":"",
+		"resource" :"",
 		"terms"    :["t6"]
 	},
  	"e2":
@@ -1357,9 +1357,9 @@
 		"type"     :"location",
 		"text"     :"Amsterdam",
 		"reference":"",
+		"resource" :"",
 		"terms"    :["t68"]
-	}},
-	"opinions"  : {
+	}},"opinions"    : {
  	"o1":
 	{   
 		"holder"    :[],
@@ -1396,6 +1396,7 @@
 		"strength"  :"1",
 		"text"      :"special deal with a taxi company"
 	}},
+	
 	"lp"        : [
 {
 	"name"     :"opennlp-en-tok",
