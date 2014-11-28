@@ -87,6 +87,8 @@ At least you need the following system setup:
 ### Depenencies for normal use:
 
 * JRuby 1.7.9 or newer
+* libarchive, on Debian/Ubuntu based systems this can be installed using
+  `sudo apt-get install libarchive-dev`
 
 ## Where to go from here
 
