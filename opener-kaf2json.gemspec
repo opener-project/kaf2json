@@ -33,6 +33,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'nokogiri'
   gem.add_dependency 'saxon-xslt'
   gem.add_dependency 'slop', '~> 3.5'
+  gem.add_dependency 'rumoji'
 
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'cucumber'

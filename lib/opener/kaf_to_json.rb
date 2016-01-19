@@ -1,5 +1,6 @@
 require 'slop'
 require 'saxon-xslt'
+require 'rumoji'
 
 require_relative 'kaf_to_json/version'
 require_relative 'kaf_to_json/server'
@@ -24,10 +25,15 @@ module Opener
     # @return [String]
     #
     def run(input)
-      doc  = Saxon::XML(input)
+      encoded = Rumoji.encode(input)
+      
+      doc = Saxon::XML(encoded)
+      
       xslt = Saxon::XSLT(File.read(xsl))
+      
+      decoded = Rumoji.decode(xslt.transform(doc).to_s)
 
-      return xslt.transform(doc).to_s
+      return decoded
     end
 
     alias tag run
