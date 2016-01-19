@@ -34,6 +34,7 @@ makes some enhancements on sentiments
 <xsl:template match="wf">
 	<xsl:choose>
 		<xsl:when test=".='&quot;'"><xsl:text>\"</xsl:text></xsl:when>
+    <xsl:when test=".='\'"><xsl:text>\\ </xsl:text></xsl:when>
 		<xsl:otherwise><xsl:value-of select="."/><xsl:text> </xsl:text></xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
