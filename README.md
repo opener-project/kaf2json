@@ -68,6 +68,12 @@ Documentation on the Webservice is provided by surfing to the urls provided
 above. For more information on how to launch a webservice run the command with
 the `--help` option.
 
+You can also launch the webservice via Docker:
+
+    docker run -d -p 8080:80 cwolff/opener-docker-kaf2json
+
+This launches the server at <http://localhost:8080>
+
 ### Daemon
 
 Last but not least the kaf2json comes shipped with a daemon that can read jobs
