@@ -31,7 +31,7 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'builder'
   gem.add_dependency 'nokogiri'
-  gem.add_dependency 'saxon-xslt'
+  gem.add_dependency 'saxon-xslt', '< 0.8.0'
   gem.add_dependency 'slop', '~> 3.5'
   gem.add_dependency 'rumoji'
 
