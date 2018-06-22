@@ -1,0 +1,8 @@
+.git/
+.gitignore
+.ruby-version
+.travis.yml
+Dockerfile
+LICENSE.txt
+README.md
+reference.md
